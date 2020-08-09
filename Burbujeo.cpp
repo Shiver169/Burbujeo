@@ -2,25 +2,29 @@
 #include<stdio.h>
 int main ()
 {
-	int v[5];
-	int i,j;
-	int aux=0;
+	int n;
+	int v[n],i;
+	int val[n],j;
+	int aux;
+
+	printf("Cuantos valores vas a ordenar: ");
+	scanf("%d",&n);
 	
-	for (i=0;i<=4;i++)
+	for (i=0;i<=n-1;i++)
 	{
 		printf ("Ingrese el valor %d : ",i+1);
 		scanf ("%d",&v[i]);
     }
     printf("La lista desordenada es: \n");
     
-    for (i=0;i<=4;i++)
+    for (i=0;i<=n-1;i++)
     {
     	printf("%d, ",v[i]);
 	}
     
-	for (i=0;i<=4;i++)
+	for (i=1;i<=n-1;i++)
     {   
-        for (j=0;j<=4;j++)
+        for (j=0;j<n-1;j++)
         {
         	if (v[j]>v[j+1])  
     		{   
@@ -31,7 +35,7 @@ int main ()
 		}
 	}
 	printf("\nLa lista ordenada es: \n");
-	for (i=0;i<=4;i++)
+	for (i=0;i<=n-1;i++)
 	{
 		printf("%d, ",v[i]);
 	}
